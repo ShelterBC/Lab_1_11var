@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 1</title>
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+    <div class="wrap">
+        <div id="drawWrap"></div>
+        <nav id="nav">
+            <div id="listNav">
+                <button class="clear">Очистити</button>
+            </div>
+
+            <div id="colorSelection">
+                <label for="colorPicker"><p>Колір фігури</p></label>
+                <input type="color" id="colorPicker" name="colorPicker">
+            </div>
+
+            <div id="linear">
+                <div id="move">
+                    <p>Переміщення</p>
+                    <div class="inputWithLabel">
+                        <label for="moveX">X</label>
+                        <input type="number" id="moveX" placeholder="Enter x" value="0">
+                    </div>
+                    <div class="inputWithLabel">
+                        <label for="moveY">Y</label>
+                        <input type="number" id="moveY" placeholder="Enter y" value="0">
+                    </div>
+                    <button id="makeMove">Перемістити</button>
+                </div>
+                <div id="rotate">
+                    <p>Обертання</p>
+                    <div class="inputWithLabel">
+                        <label for="rotateX">X</label>
+                        <input type="number" id="rotateX" placeholder="Enter x" value="0">
+                    </div>
+                    <div class="inputWithLabel">
+                        <label for="rotateY">Y</label>
+                        <input type="number" id="rotateY" placeholder="Enter y" value="0">
+                    </div>
+                    <div class="inputWithLabel">
+                        <label for="rotateInputAngle">Кут</label>
+                        <input type="number" id="rotateInputAngle" placeholder="Enter angle" value="0">
+                    </div>
+                    <button id="makeRotate">Обернути</button>
+                </div>
+                <div id="gridParametrs">
+                    <p>Сітка</p>
+                    <div class="inputWithLabel">
+                        <label for="gridSize">Клітинка</label>
+                        <input type="number" id="gridSize" placeholder="Enter size" value="0" min="5" step="5">
+                    </div>
+                    <div class="inputWithLabel">
+                        <label for="Scale">Масштаб</label>
+                        <input type="number" id="Scale" placeholder="Enter scale" value="0">
+                    </div>
+                    <button id="changeGrid">Примінити</button>
+                </div>
+            </div>
+            <div id="affine">
+                <div>
+                    <span>r0[</span>
+                    <input type="number" id="r0X" value="0">
+                    <input type="number" id="r0Y" value="0">
+                    <span>]</span>
+                </div>
+                <div>
+                    <span>rX[</span>
+                    <input type="number" id="rXX" value="1">
+                    <input type="number" id="rXY" value="0">
+                    <span>]</span>
+                </div>
+                <div>
+                    <span>rY[</span>
+                    <input type="number" id="rYX" value="1">
+                    <input type="number" id="rYY" value="1">
+                    <span>]</span>
+                </div>
+                <button id="makeAffine">Застосувати</button>
+            </div>
+            <div id="proectional">
+                <div>
+                    <span>pX[</span>
+                    <input type="number" id="Xx" value="100">
+                    <input type="number" id="Xy" value="0">
+                    <input type="number" id="wX" value="10">
+                    <span>]</span>
+                </div>
+                <div>
+                    <span>pY[</span>
+                    <input type="number" id="Yx" value="0">
+                    <input type="number" id="Yy" value="200">
+                    <input type="number" id="wY" value="10">
+                    <span>]</span>
+                </div>
+                <div>
+                    <span>p0[</span>
+                    <input type="number" id="0x" value="0">
+                    <input type="number" id="0y" value="0">
+                    <input type="number" id="w0" value="1000">
+                    <span>]</span>
+                </div>
+                <button id="makeProectional">Застосувати</button>
+            </div>
+        </nav>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+
+    <script src="https://unpkg.com/konva@9/konva.min.js"></script>
+    <script src="Grid.js"></script>
+    <script src="Figure.js"></script>
+    <script src="Circle.js"></script>
+    <script src="menu.js"></script>
+    <script src="index.js"></script>
+
+</body>
+
+</html>

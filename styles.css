@@ -1,0 +1,181 @@
+:root {
+    --primary-light: #8abdff;
+    --primary: #6d5dfc;
+    --primary-dark: #5b0eeb;
+    --white: #fff;
+    --greyLight-1: #e4ebf5;
+    --greyLight-2: #c8d0e7;
+    --greyLight-3: #bec8e4;
+    --greyDark: #9baacf;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    overflow: hidden;
+}
+
+#drawWrap {
+    margin: 5px;
+    border: 1px solid;
+    padding: 5px;
+}
+
+nav {
+    width: 300px;
+    height: 505px;
+    padding: 5px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    gap: 20px;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    transition: 1s;
+    border-radius: 50px;
+    scrollbar-width: none;
+}
+
+nav::-webkit-scrollbar {
+    width: 0;
+}
+
+#listNav {
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    border-radius: 50px 0 0 0;
+}
+
+li {
+    margin-top: 10px;
+    display: block;
+}
+
+#listNav button,
+button {
+    height: 2rem;
+    width: 100%;
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+    background: #f3f7f4;
+    border: none;
+    font-size: 16px;
+    color: black;
+    border-radius: 50px 50px 0 0;
+}
+
+button {
+    width: 11.4rem;
+    color: white;
+    background: #3e2d89;
+    border-radius: 10px;
+}
+
+button:hover {
+    color: var(--white);
+}
+
+button:active {
+    box-shadow: inset 0.2rem 0.2rem 1rem var(--primary-dark), inset -0.2rem -0.2rem 1rem var(--primary-light);
+}
+
+.clear {
+    background: black !important;
+    color: white !important;
+}
+
+.clear:hover {
+    color: white;
+}
+
+.clear:active {
+    box-shadow: inset 0.2rem 0.2rem 1rem #eb0e68, inset -0.2rem -0.2rem 1rem #432222;
+}
+
+#listNav button:hover {
+    color: var(--primary);
+}
+
+#listNav button:active {
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+}
+
+.btn p {
+    font-size: 1.6rem;
+}
+
+#affine div,
+#proectional div {
+    margin: 5px;
+}
+
+#proectional,
+#colorSelection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#linear:only-child {
+    margin-top: 20px;
+}
+
+#move,
+#rotate,
+#gridParametrs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+.inputWithLabel {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 55%;
+}
+
+p {
+    font-size: 1.4rem;
+}
+
+input {
+    width: 3rem;
+    height: 2rem;
+    border: none;
+    font-size: 1.1rem;
+    padding-left: 1.1rem;
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+    background: none;
+    font-family: inherit;
+    color: var(--greyDark);
+}
+
+input::placeholder {
+    color: var(--greyLight-3);
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+}
